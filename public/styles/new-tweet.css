@@ -6,10 +6,13 @@
   width: 60%;
   height: 50px;
   background: transparent;
-  border: none;
+  border-style: none;
+  outline: none;
+  overflow: auto;
   border-bottom: 5px solid #545149;
   font-weight:bold;
   margin-bottom: 10px;
+  color: #545149;
 }
 
 .new-tweet input {
