@@ -1,0 +1,10 @@
+header {
+  padding-top: 25px;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+  background-color: #f4743b;
+  background-image: url('../images/dark-mosaic.png');
+  color: white;
+}
+

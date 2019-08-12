@@ -1,0 +1,25 @@
+.new-tweet {
+  text-align: center;
+}
+
+.new-tweet textarea {
+  width: 60%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  border-bottom: 5px solid #545149;
+  font-weight:bold;
+  margin-bottom: 10px;
+}
+
+.new-tweet input {
+  background-color:#4056A1;
+  font-family: 'Bungee', cursive;
+  color: white;
+  border: none;
+  margin-right: 50%;
+}
+
+.new-tweet span {
+  font-family: 'Bungee', cursive;
+}

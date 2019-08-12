@@ -1,0 +1,19 @@
+nav {
+  display: fixed;
+  font-family: 'Bungee', cursive;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 125px;
+  width: 100%;
+  padding: 1.5em;
+  z-index: 1;
+}
+
+nav div {
+  font-family: 'Source Sans Pro', sans-serif;
+  float: right;
+}
+
+nav div span {
+  font-weight: bold;
+}
