@@ -1,14 +1,22 @@
 $(document).ready(function() {
-  
+  let count = 0;
+
   $('textarea').keyup(function(event) {
+    const span = this.closest("form").children[3];
     let val = this.value.length;
-    let count = 0;
-    if (count < 140 && count > 0 && event.keyCode === 8) {
+
+    if (count < 140 && event.keyCode === 8) {
       count++;
-      $(".counter").text(count);
+      span.innerText = count;
     } else {
       count = 140 - val;
-      $(".counter").text(count);
+      span.innerText = count;
+    }
+
+    if (count < 0) {
+      span.style.color = "red";
+    } else {
+      span.style.color = "#545149";
     }
   });
 
