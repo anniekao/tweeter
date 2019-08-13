@@ -1,29 +1,31 @@
-.new-tweet {
+#new-tweet {
   text-align: center;
 }
 
-.new-tweet textarea {
-  width: 60%;
+#new-tweet textarea {
+  width: 80%;
   height: 50px;
   background: transparent;
   border-style: none;
   outline: none;
   overflow: auto;
-  border-bottom: 5px solid #545149;
+  border-bottom: 4px solid #545149;
   font-weight:bold;
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 10px;
   color: #545149;
 }
 
-.new-tweet input {
+#new-tweet input {
   background-color:#4056A1;
   font-family: 'Bungee', cursive;
+  font-size: 20px;
+  padding: 5px 10px 5px 10px;
   color: white;
   border: none;
-  margin-right: 50%;
+  margin-right: 70%;
 }
 
-.new-tweet span {
+#new-tweet span {
   font-family: 'Bungee', cursive;
 }
