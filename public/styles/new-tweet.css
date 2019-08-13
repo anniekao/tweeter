@@ -20,12 +20,16 @@
   background-color:#4056A1;
   font-family: 'Bungee', cursive;
   font-size: 20px;
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
   color: white;
   border: none;
   margin-right: 70%;
 }
 
-#new-tweet span {
+#new-tweet .counter {
   font-family: 'Bungee', cursive;
+}
+
+#new-tweet .counter.warning {
+  color: red;
 }

@@ -1,14 +1,17 @@
 #tweets-container {
   margin-top: 55px;
   margin-bottom: 100px;
+  padding: 0;
 }
 
 article.tweet {
+  padding: 10px 0;
   opacity: 0.5;
   width: 80%;
   height: 250px;
   border: 4px solid #545149;
   margin: 0 auto;
+  margin-bottom: 30px;
   display: grid;
 }
 
@@ -18,11 +21,12 @@ article.tweet:hover {
   opacity: 0.9;
 }
 
-article.tweet:hover #userHandle {
+article.tweet:hover .userHandle {
   display:block;
 }
 
 article.tweet header {
+  padding:5px;
   height: 25px;
   background: none;
 }
@@ -35,14 +39,14 @@ article.tweet header img {
   width: 50px;
 }
 
-#userName {
+article .userName {
   color: #545149;
   font-weight: normal;
   float: left;
   margin: 12px;
 }
 
-#userHandle {
+article .userHandle {
   display: none;
   float: right;
   color: lightslategrey;
