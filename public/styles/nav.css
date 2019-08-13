@@ -9,11 +9,21 @@ nav {
   z-index: 1;
 }
 
-nav div {
+nav .write-tweet {
   font-family: 'Source Sans Pro', sans-serif;
   float: right;
 }
 
-nav div span {
+nav .write-tweet .text {
+  display: block;
+}
+
+nav .write-tweet .text .bold {
   font-weight: bold;
+}
+
+nav .write-tweet #double-chevron {
+  display: block;
+  font-weight: bold;
+  text-align: center;
 }
