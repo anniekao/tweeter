@@ -27,4 +27,21 @@ const createTweetElement = (tweet) => {
   `);
 
   return $tweet;
+
 };
+
+const renderTweets = (tweetArr) => {
+  for (let tweet of tweetArr) {
+    $('#tweets-container').append(createTweetElement(tweet));
+  }
+};
+
+const loadTweets = () => {
+  $.ajax('/tweets', {
+    method:'GET',
+  }).then(function(res) {
+    renderTweets(res);
+  });
+};
+
+loadTweets();

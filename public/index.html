@@ -26,22 +26,22 @@
 
     <!-- Ajax call -->
      <script>
-       $(function () {
+       $(function() {
          const $form = $('#tweet-form');
          $form.submit(function (event) {
            event.preventDefault();
-           console.log('Submitting tweet...');
+          //  console.log('Submitting tweet...');
            $.ajax({
              url: '/tweets',
              type: 'POST',
              data: $form.serialize(),
              success: (function () {
-               console.log('Tweet sent!');
+              //  console.log('Tweet sent!');
              })
            })
+           // clears the form after submitting tweet
            $('textarea').val('');
-         });
-       })
+         })
      </script>
   </head>
 
