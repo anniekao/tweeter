@@ -13,7 +13,6 @@ const calculateDaysBetween = (dateCreated) => {
   // divide differenceInTime by milliseconds in a day
   const differenceInDays = Math.round(differenceInTime / (1000 * 60 * 60 * 24));
 
-
   return differenceInDays === 1 ? '1 day ago' : `${differenceInDays} days ago`;
 };
 
@@ -140,5 +139,7 @@ $(function() {
   // Used to scroll back up when  scroll up button is clicked
   $scrollUpBtn.click(function() {
     $(window).scrollTop({ top: 0, behavior: 'smooth'});
+    $("#tweet-form").slideToggle();
+
   });
 });
