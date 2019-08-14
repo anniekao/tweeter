@@ -47,6 +47,9 @@ const loadTweets = () => {
 loadTweets();
 
 $(function() {
+  
+  $('#tweet-form').hide();
+
   // Toggles the visibility of the tweet textarea/form 
   $('#double-chevron').click(function() {
     $('#tweet-form').slideToggle();
