@@ -5,6 +5,14 @@
  */
 
 const createTweetElement = (tweet) => {
+  // escapes text by making use of .createTextNode() to avoid
+  // cross-site-scripting (XSS)
+  const escape = str => {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const $tweet = $("<article>").addClass("tweet").append(`
      <header>
       <img src= ${tweet.user.avatars}>
@@ -13,7 +21,8 @@ const createTweetElement = (tweet) => {
     </header>
 
     <main>
-      <div class="tweet-text">${tweet.content.text}</div>
+    
+      <div class="tweet-text">${escape(tweet.content.text)}  )</div>
     </main>
 
     <footer>
@@ -30,7 +39,7 @@ const createTweetElement = (tweet) => {
       </div>
     </footer>
   `);
-
+  
   return $tweet;
 
 };
