@@ -46,3 +46,39 @@ const loadTweets = () => {
 
 loadTweets();
 
+$(function() {
+  const $form = $("#tweet-form");
+
+  // Form validation using jquery-validation plugin
+  $form.validate({
+    rules: {
+      text: {
+        required: true,
+        minlength: 2,
+        maxlength: 140
+      }
+    },
+    messages: {
+      text: {
+        required: `<div class="err">Please enter a tweet </div>`,
+        minlength: `<div class="err">Your tweet is too short!</div>`,
+        maxlength: `<div class="err">Your tweet is too long!</div>`
+      }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        url: "/tweets",
+        type: "POST",
+        data: $form.serialize(),
+        success: function() {
+          loadTweets();
+        },
+        error: function() {
+          alert("Tweet is too short!");
+        }
+      });
+      $("textarea").val("");
+      return false;
+    }
+  });
+});
