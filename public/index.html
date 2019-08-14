@@ -28,20 +28,28 @@
      <script>
        $(function() {
          const $form = $('#tweet-form');
-         $form.submit(function (event) {
-           event.preventDefault();
-          //  console.log('Submitting tweet...');
-           $.ajax({
-             url: '/tweets',
-             type: 'POST',
-             data: $form.serialize(),
-             success: (function () {
-              //  console.log('Tweet sent!');
-             })
-           })
-           // clears the form after submitting tweet
-           $('textarea').val('');
-         })
+         const $textarea = $('textarea');
+         if ($textarea.val() > 140) {
+          alert('Your tweet is too long!');
+         } else if ($textarea.val() === "") {
+           alert('Please enter a tweet');
+         } else {
+            $form.submit(function (event) {
+              event.preventDefault();
+              //  console.log('Submitting tweet...');
+              $.ajax({
+                url: '/tweets',
+                type: 'POST',
+                data: $form.serialize(),
+                success: (function () {
+                  //  console.log('Tweet sent!');
+                })
+              })
+              // clears the form after submitting tweet
+              $('textarea').val('');
+
+            })
+          }
      </script>
   </head>
 

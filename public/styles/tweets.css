@@ -60,7 +60,8 @@ article.tweet main {
   border-bottom: 4px solid #545149;
 }
 
-#tweetText {
+.tweet-text {
+  word-wrap: break-word;
   color: #545149;
   font-weight:normal;
 }
