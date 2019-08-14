@@ -24,33 +24,56 @@
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- Ajax call -->
-     <script>
-       $(function() {
-         const $form = $('#tweet-form');
-         const $textarea = $('textarea');
-         if ($textarea.val() > 140) {
-          alert('Your tweet is too long!');
-         } else if ($textarea.val() === "") {
-           alert('Please enter a tweet');
-         } else {
-            $form.submit(function (event) {
-              event.preventDefault();
-              //  console.log('Submitting tweet...');
-              $.ajax({
-                url: '/tweets',
-                type: 'POST',
-                data: $form.serialize(),
-                success: (function () {
-                  //  console.log('Tweet sent!');
-                })
-              })
-              // clears the form after submitting tweet
-              $('textarea').val('');
+    <!-- Jquery-validation plugin -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
-            })
+    <script> 
+       $(function() {
+        const $form = $('#tweet-form');
+
+        // Form validation using jquery-validation plugin
+        $form.validate({
+          rules: {
+            text: {
+            required: true,
+            minlength: 2,
+            maxlength: 140
+            }
+          },
+          messages: {
+            text: {
+              required: `<div class="err">Please enter a tweet </div>`,
+              minlength: `<div class="err">Your tweet is too short!</div>`,
+              maxlength: `<div class="err">Your tweet is too long!</div>`
+            }
+          },
+          submitHandler: function(form) {
+            $.ajax({
+              url: '/tweets',
+              type: 'POST',
+              data: $form.serialize(),
+              success: function() {
+                loadTweets();
+              },
+              error: function() {
+                alert('Tweet is too short!');
+              }
+            });
+            $('textarea').val('');
+            return false;
           }
-     </script>
+        });
+               
+
+        // $form.submit(function (event) {
+        //   event.preventDefault();
+        
+        //   // AJAX call to post tweets
+          
+          
+        // });
+       })
+    </script>
   </head>
 
   <body>
