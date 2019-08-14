@@ -3,8 +3,8 @@
   position: fixed;
   bottom: 20px;
   right: 30px;
-  border: 2px solid lightgrey;
-  background-color: white;
+  border: 2px dotted black;
+  cursor:pointer;
   color: #59ffa0;
   padding: 15px;
   text-align: center;
