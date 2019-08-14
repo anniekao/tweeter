@@ -47,6 +47,11 @@ const loadTweets = () => {
 loadTweets();
 
 $(function() {
+  // Toggles the visibility of the tweet textarea/form 
+  $('#double-chevron').click(function() {
+    $('#tweet-form').slideToggle();
+  });
+
   const $form = $("#tweet-form");
 
   // Form validation using jquery-validation plugin
@@ -66,6 +71,7 @@ $(function() {
       }
     },
     submitHandler: function(form) {
+      // AJAX call after form has been validated
       $.ajax({
         url: "/tweets",
         type: "POST",
