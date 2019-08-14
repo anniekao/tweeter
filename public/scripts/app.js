@@ -98,6 +98,7 @@ $(function() {
   // Toggles the visibility of the tweet textarea/form 
   $('#double-chevron').click(function() {
     $('#tweet-form').slideToggle();
+    $('textarea').focus();
   });
 
   const $form = $("#tweet-form");
