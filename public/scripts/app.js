@@ -13,7 +13,25 @@ const calculateDaysBetween = (dateCreated) => {
   // divide differenceInTime by milliseconds in a day
   const differenceInDays = Math.round(differenceInTime / (1000 * 60 * 60 * 24));
 
-  return differenceInDays === 1 ? '1 day ago' : `${differenceInDays} days ago`;
+  const years = Math.floor(differenceInDays / 365);
+  const weeks = Math.floor(differenceInDays % 365) / 7;
+  const days = Math.floor(differenceInDays % 365) % 7;
+
+  if (years === 1) {
+    return `1 year ago`;
+  } else if (years > 1) {
+    return `${years} years ago`;
+  } else if (weeks === 1) {
+    return `1 week ago`;
+  } else if (weeks > 1) {
+    return `${weeks} weeks ago`;
+  } else if (days === 1) {
+    return `1 day ago`;
+  } else if (days > 1) {
+    return `${days} days ago`;
+  } else {
+    return `0 days ago`;
+  }
 };
 
 const createTweetElement = (tweet) => {
