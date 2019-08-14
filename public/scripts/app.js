@@ -4,6 +4,19 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const calculateDaysBetween = (dateCreated) => {
+  const dateThen = dateCreated;
+  const dateNow = new Date();
+
+  const differenceInTime = dateNow.getTime() - dateThen.getTime();
+
+  // divide differenceInTime by milliseconds in a day
+  const differenceInDays = Math.round(differenceInTime / (1000 * 60 * 60 * 24));
+
+
+  return differenceInDays === 1 ? '1 day ago' : `${differenceInDays} days ago`;
+};
+
 const createTweetElement = (tweet) => {
    // escapes text by making use of .createTextNode() to avoid
   // cross-site-scripting (XSS)
@@ -27,7 +40,7 @@ const createTweetElement = (tweet) => {
 
     <footer>
       <div class="date">
-        <span class="days">10 days ago</span>
+        <span class="days">${calculateDaysBetween(new Date(tweet.created_at))}</span>
         <span class="fullDate">Created on ${new Date(tweet.created_at).toLocaleDateString("en-US")}</span>
       </div>
       
