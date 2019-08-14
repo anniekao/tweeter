@@ -127,17 +127,18 @@ $(function() {
         data: $form.serialize(),
         success: function() {
           loadTweets();
+          
         },
         error: function() {
           alert("Tweet is too short!");
         }
       });
       $("textarea").val("");
-      return false;
+      $("textarea").text("140");
     }
   });
 
-  // When user scrolls down 30px from top then the scroll up button appears
+  // When user scrolls down from top then the scroll up button appears
   const $scrollUpBtn = $("#scrollUpBtn");
   $scrollUpBtn.hide();
   
