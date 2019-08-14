@@ -69,10 +69,13 @@ article.tweet main {
   font-weight:normal;
 }
 
+article.tweet footer {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 article.tweet footer .date {
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
   font-size:20px;
   position: relative;
   left: 60px;
@@ -81,10 +84,13 @@ article.tweet footer .date {
   font-weight:normal;
 }
 
+article.tweet footer .days  {
+  margin-right: 30px;
+}
+
 article.tweet footer img {
   width: 20px;
-  margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 #icons {
