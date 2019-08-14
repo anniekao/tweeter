@@ -34,3 +34,10 @@
 #new-tweet .counter.warning {
   color: red;
 }
+
+#new-tweet .err {
+  width: 80%;
+  border: 2px dotted red;
+  margin: 0 auto;
+  color: red;
+}
