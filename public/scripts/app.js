@@ -17,7 +17,12 @@ const createTweetElement = (tweet) => {
     </main>
 
     <footer>
-      <h6>10 days ago</h6>
+      <div class="date">
+        <span class="days">10 days ago</span>
+        <span class="fullDate">Created on ${new Date(tweet.created_at).toLocaleDateString("en-US")}</span>
+      </div>
+      
+      
       <div id="icons">         
         <img src="./images/flag.png" />
         <img src="./images/share.png" />

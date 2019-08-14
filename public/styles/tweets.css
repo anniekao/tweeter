@@ -69,10 +69,14 @@ article.tweet main {
   font-weight:normal;
 }
 
-article.tweet footer h6 {
-  display: inline;
+article.tweet footer .date {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  font-size:20px;
   position: relative;
   left: 60px;
+  margin-top: 20px;
   color: #545149;
   font-weight:normal;
 }
