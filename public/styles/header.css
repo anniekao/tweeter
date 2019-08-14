@@ -7,3 +7,11 @@ header {
   color: white;
 }
 
+header h2 {
+  font-weight: normal;
+}
+
+header h2 #firstName {
+  font-weight: bold;
+}
+
