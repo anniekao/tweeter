@@ -2,6 +2,8 @@
   margin-top: 55px;
   margin-bottom: 100px;
   padding: 0;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 article.tweet {
