@@ -5,7 +5,7 @@
  */
 
 const createTweetElement = (tweet) => {
-  // escapes text by making use of .createTextNode() to avoid
+   // escapes text by making use of .createTextNode() to avoid
   // cross-site-scripting (XSS)
   const escape = str => {
     let div = document.createElement('div');
@@ -22,7 +22,7 @@ const createTweetElement = (tweet) => {
 
     <main>
     
-      <div class="tweet-text">${escape(tweet.content.text)}  )</div>
+      <div class="tweet-text">${escape(tweet.content.text)}</div>
     </main>
 
     <footer>
@@ -58,10 +58,11 @@ const loadTweets = () => {
   });
 };
 
-loadTweets();
+
 
 $(function() {
-  
+  loadTweets();
+
   $('#tweet-form').hide();
 
   // Toggles the visibility of the tweet textarea/form 
@@ -103,5 +104,28 @@ $(function() {
       $("textarea").val("");
       return false;
     }
+  });
+
+  // When user scrolls down 30px from top then the scroll up button appears
+  const $scrollUpBtn = $("#scrollUpBtn");
+  $scrollUpBtn.hide();
+  
+  window.onscroll = () => {
+    scrollFunc();
+  };
+
+  const scrollFunc = () => {
+    const position = $(window).scrollTop();
+
+    if (position > 900) {
+      $("#scrollUpBtn").show();
+    } else {
+      $("#scrollUpBtn").hide();
+    }
+  };
+
+  // Used to scroll back up when  scroll up button is clicked
+  $scrollUpBtn.click(function() {
+    $(window).scrollTop({ top: 0, behavior: 'smooth'});
   });
 });

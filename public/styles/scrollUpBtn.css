@@ -1,0 +1,16 @@
+#scrollUpBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: 2px solid lightgrey;
+  background-color: white;
+  color: #59ffa0;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 80px;
+  margin: 2px 1px;
+  border-radius: 50%;
+}
