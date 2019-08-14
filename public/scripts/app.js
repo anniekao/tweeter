@@ -58,7 +58,7 @@ const createTweetElement = (tweet) => {
     <footer>
       <div class="date">
         <span class="days">${calculateDaysBetween(new Date(tweet.created_at))}</span>
-        <span class="fullDate">Created on ${new Date(tweet.created_at).toLocaleDateString("en-US")}</span>
+        <span class="fullDate">Posted on ${new Date(tweet.created_at).toLocaleDateString("en-US")}</span>
       </div>
       
       
