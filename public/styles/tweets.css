@@ -70,13 +70,13 @@ article.tweet main {
 }
 
 article.tweet footer {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 article.tweet footer .date {
-  font-size:20px;
+  font-size: 20px;
   position: relative;
   left: 60px;
   margin-top: 20px;
@@ -93,8 +93,18 @@ article.tweet footer img {
   margin-top: 20px;
 }
 
-#icons {
-  float:right;
+article.tweet #icons {
+  display: none;
+  float: right;
   margin-right: 56px;
 }
+
+article.tweet:hover #icons {
+  display: block;
+  float: right;
+  margin-right: 56px;
+}
+
+
+
 
