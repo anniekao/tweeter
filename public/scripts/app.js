@@ -146,12 +146,12 @@ $(function() {
   const scrollFunc = () => {
     const position = $(window).scrollTop();
 
-    if (position > 100) {
+    if (position > 50) {
       $("#scrollUpBtn").show();
-      $(".write-tweet").hide();
+      $(".write-tweet").fadeOut();
     } else {
       $("#scrollUpBtn").hide();
-      $(".write-tweet").show();
+      $(".write-tweet").fadeIn();
     }
   };
 
