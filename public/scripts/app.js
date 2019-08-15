@@ -127,14 +127,10 @@ $(function() {
         data: $form.serialize(),
         success: function() {
           loadTweets();
-          
         },
-        error: function() {
-          alert("Tweet is too short!");
-        }
       });
+      $(".counter").text("140");
       $("textarea").val("");
-      $("textarea").text("140");
     }
   });
 
