@@ -23,7 +23,45 @@ nav .write-tweet .text .bold {
 }
 
 nav .write-tweet #double-chevron {
-  display: block;
+  display:block;
   font-weight: bold;
   text-align: center;
+  color: orangered;
+  cursor: pointer;
+}
+
+.bounce {
+  position: absolute;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 80px;
+  }
+
+  25%,
+  75% {
+    top: 75px;
+  }
+
+  50% {
+    top: 80px;
+  }
+
+  100% {
+    top: 75px;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  border-top: 0;
 }
