@@ -15,3 +15,26 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## App Flow
+
+### Desktop View
+![Desktop view](https://github.com/anniekao/tweeter/blob/master/public/images/screenshot_desktop.png)
+
+### Tablet View
+![Tablet view](https://github.com/anniekao/tweeter/blob/master/public/images/screenshot_tablet.png)
+
+### New Tweet
+![New tweet](https://github.com/anniekao/tweeter/blob/master/public/images/screenshot_new-tweet.png)
+
+### Error Handling
+![Error handling](https://github.com/anniekao/tweeter/blob/master/public/images/screenshot_error.png)
+
+## Deployment
+This app has yet to be deployed.
+
+## Versioning
+Tweeter 1.0.0
+
+## Authors
+Annie Kao: JavaScript | HTML | CSS | JQuery | Ajax
