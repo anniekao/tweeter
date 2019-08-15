@@ -7,14 +7,14 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- App CSS -->
+    <!-- Internal CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     <link rel="stylesheet" href="/styles/scrollUpBtn.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/media-queries.css" type="text/css" />
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
   </head>
 
   <body>
-    <!-- Scroll up button (appears when user scrolls down 30px from top -->
+    <!-- Scroll up button (appears when user scrolls down) -->
     <div class='bounce-scroll-up' id="scrollUpBtn">
       &#11165
     </div>
@@ -54,7 +54,7 @@
       </div>
 
       <div>
-        <h2><span id="firstName">Your </span>Name</h2>
+        <h2><span id="firstName">Max </span>Mustermann</h2>
       </div>
     </header>
 
@@ -63,9 +63,12 @@
       <section id="new-tweet">
         <form id="tweet-form" method="POST" action="/tweets">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet" id="submit-tweet">
+          <div class= "new-tweet-footer">
+            <input type="submit" value="Tweet" id="submit-tweet">
           <!-- To-do: Add reset button to clear textarea -->
           <span class="counter">140</span>
+          </div>
+          
         </form>
       </section>
 

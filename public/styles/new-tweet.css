@@ -1,11 +1,16 @@
 #new-tweet {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
+}
+#new-tweet form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #new-tweet textarea {
-  width: 80%;
-  height: 100px;
+  width: 100%;
+  height: auto;
   background: transparent;
   border-style: none;
   outline: none;
@@ -17,14 +22,18 @@
   color: #545149;
 }
 
+.new-tweet-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 #new-tweet input {
   background-color:#4056A1;
   font-family: 'Bungee', cursive;
   font-size: 20px;
-  padding: 5px 10px;
+  padding: 10px;
   color: white;
   border: none;
-  margin-right: 70%;
 }
 
 #new-tweet .counter {
@@ -36,8 +45,7 @@
 }
 
 #new-tweet .err {
-  width: 80%;
+  margin-bottom: 20px;
   border: 2px dotted red;
-  margin: 0 auto;
   color: red;
 }
