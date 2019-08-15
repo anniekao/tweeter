@@ -1,9 +1,8 @@
 nav {
-  display: fixed;
   font-family: 'Bungee', cursive;
   background-color: #4056A1;
   color: #FFFFFF;
-  height: 125px;
+  height: 100px;
   width: 100%;
   padding: 1.5em;
   z-index: 1;
@@ -28,7 +27,7 @@ nav .write-tweet #double-chevron {
   text-align: center;
   color: orangered;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 2px;
 }
 
 nav .write-tweet #double-chevron:hover {
