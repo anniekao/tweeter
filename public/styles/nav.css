@@ -34,15 +34,6 @@ nav .write-tweet #double-chevron:hover {
   animation: bounce 1s;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left: 0;
-  z-index: 1;
-  border-top: 0;
-}
-
 @keyframes bounce {
 
   0%,

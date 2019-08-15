@@ -160,15 +160,4 @@ $(function() {
 
   });
 
-  // Make the navbar stick to the top of the page during scroll
-  const stickyOffset = $('nav').offset().top;
-  const stickyNav = () => {
-    if ($(window).scrollTop() > stickyOffset) {
-      $('nav').addClass('sticky');
-      $('.write-tweet').hide();
-    }  else {
-      $('nav').removeClass('sticky');
-      $(".write-tweet").show();
-    }
-  };
 });
