@@ -77,6 +77,7 @@ const createTweetElement = (tweet) => {
 };
 
 const renderTweets = (tweetArr) => {
+  $("#tweets-container").empty();
   for (let tweet of tweetArr) {
     $('#tweets-container').append(createTweetElement(tweet));
   }
@@ -140,16 +141,17 @@ $(function() {
   
   window.onscroll = () => {
     scrollFunc();
-    stickyNav();
   };
 
   const scrollFunc = () => {
     const position = $(window).scrollTop();
 
-    if (position > 900) {
+    if (position > 100) {
       $("#scrollUpBtn").show();
+      $(".write-tweet").hide();
     } else {
       $("#scrollUpBtn").hide();
+      $(".write-tweet").show();
     }
   };
 
@@ -157,7 +159,6 @@ $(function() {
   $scrollUpBtn.click(function() {
     $(window).scrollTop({ top: 0, behavior: 'smooth'});
     $("#tweet-form").slideToggle();
-
   });
 
 });
