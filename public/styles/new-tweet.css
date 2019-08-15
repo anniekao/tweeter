@@ -46,6 +46,7 @@
 
 #new-tweet .err {
   margin-bottom: 20px;
-  border: 2px dotted red;
-  color: red;
+  padding: 10px;
+  background-color: #ffe600;
+  color: white;
 }
