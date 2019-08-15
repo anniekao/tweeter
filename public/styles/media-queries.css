@@ -1,0 +1,38 @@
+@media only screen and (max-width: 1023px) {
+  nav {
+    display: fixed;
+    background: transparent;
+  }
+
+  main.container {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  header {
+    float: left;
+    height: 50%;
+    width: 30%; 
+    margin-left: 50px;
+    margin-right: 150px;
+    font-size: 75%;
+  }
+
+  header img {
+    width: 50%;
+  }
+
+  main {
+    margin-top: 200px;
+  }
+
+  article.tweet {
+    width: 100%;
+  }
+
+  article.tweet header {
+    width: 100%;
+    margin: 0;
+  }
+}
