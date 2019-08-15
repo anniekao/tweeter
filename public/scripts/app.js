@@ -32,10 +32,12 @@ const calculateDaysBetween = (dateCreated) => {
   } else {
     return `0 days ago`;
   }
+
+  //To-do: return minutes/hours instead of 0 days
 };
 
 const createTweetElement = (tweet) => {
-   // escapes text by making use of .createTextNode() to avoid
+  // escapes text by making use of .createTextNode() to avoid
   // cross-site-scripting (XSS)
   const escape = str => {
     let div = document.createElement('div');
@@ -87,8 +89,6 @@ const loadTweets = () => {
     renderTweets(res);
   });
 };
-
-
 
 $(function() {
   loadTweets();
@@ -166,8 +166,6 @@ $(function() {
 
   // Make the navbar stick to the top of the page during scroll
   const stickyOffset = $('nav').offset().top;
-  console.log(stickyOffset);
-  console.log($('nav'));
   const stickyNav = () => {
     if ($(window).scrollTop() > stickyOffset) {
       $('nav').addClass('sticky');
