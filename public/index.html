@@ -35,13 +35,13 @@
 
   <body>
     <!-- Scroll up button (appears when user scrolls down 30px from top -->
-    <div id="scrollUpBtn">
+    <div class='bounce-scroll-up' id="scrollUpBtn">
       &#11165
     </div>
 
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="logo">tweeter</span>
       <div class="write-tweet">
         <span class="text"><span class="bold">Write </span>a new tweet</span>
         <span id="double-chevron">⏬</span>
@@ -63,7 +63,6 @@
       <section id="new-tweet">
         <form id="tweet-form" method="POST" action="/tweets">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <br>
           <input type="submit" value="Tweet" id="submit-tweet">
           <!-- To-do: Add reset button to clear textarea -->
           <span class="counter">140</span>
