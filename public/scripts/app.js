@@ -147,10 +147,10 @@ $(function() {
     const position = $(window).scrollTop();
 
     if (position > 50) {
-      $("#scrollUpBtn").show();
+      $("#scrollUpBtn").fadeIn();
       $(".write-tweet").fadeOut();
     } else {
-      $("#scrollUpBtn").hide();
+      $("#scrollUpBtn").fadeOut();
       $(".write-tweet").fadeIn();
     }
   };
