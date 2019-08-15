@@ -105,15 +105,4 @@ article.tweet:hover #icons {
   margin-right: 56px;
 }
 
-@media only screen and (min-width: 1024px) {
-  article.tweet {
-    width: 100%;
-  }
-
-  article.tweet header {
-    width: 100%;
-    margin: 0;
-  }
-}
-
 

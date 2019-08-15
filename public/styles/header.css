@@ -15,19 +15,3 @@ header h2 #firstName {
   font-weight: bold;
 }
 
-/* Media Queries */
-
-@media only screen and (min-width: 1024px) {
-  header {
-    float: left;
-    height: 50%;
-    width: 30%;
-    margin-left: 50px;
-    margin-right: 150px;
-    font-size: 75%;
-  }
-
-  header img {
-    width: 50%;
-  }
-}
