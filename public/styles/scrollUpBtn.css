@@ -3,9 +3,8 @@
   position: fixed;
   bottom: 20px;
   right: 30px;
-  border: 2px dotted black;
+  color: #f95738;
   cursor:pointer;
-  color: #59ffa0;
   padding: 15px;
   text-align: center;
   text-decoration: none;
@@ -13,4 +12,29 @@
   font-size: 80px;
   margin: 2px 1px;
   border-radius: 50%;
+}
+
+#scrollUpBtn:hover {
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  60%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
 }
