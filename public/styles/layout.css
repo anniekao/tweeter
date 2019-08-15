@@ -30,3 +30,16 @@ body {
    width: 90%;
    margin: 0 auto;
  }
+
+ /* Media Queries */
+ @media only screen and (min-width: 768px and max-width: 1024px) {
+    main.container {
+      margin-top: 100px;
+    }
+ }
+
+ @media only screen and (mind-width: 1024px) {
+   main {
+     margin-top: 200px;
+   }
+ }
