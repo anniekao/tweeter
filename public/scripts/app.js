@@ -45,6 +45,9 @@ const createTweetElement = (tweet) => {
     return div.innerHTML;
   };
 
+  const postDate = new Date(tweet.created_at).toLocaleDateString("en-US");
+  const daysCreated = calculateDaysBetween(new Date(tweet.created_at));
+
   const $tweet = $("<article>").addClass("tweet").append(`
      <header>
       <img src= ${tweet.user.avatars}>
@@ -59,8 +62,8 @@ const createTweetElement = (tweet) => {
 
     <footer>
       <div class="date">
-        <span class="days">${calculateDaysBetween(new Date(tweet.created_at))}</span>
-        <span class="fullDate">Posted on ${new Date(tweet.created_at).toLocaleDateString("en-US")}</span>
+        <span class="days">${daysCreated}</span>
+        <span class="fullDate">Posted on ${postDate}</span>
       </div>
       
       
